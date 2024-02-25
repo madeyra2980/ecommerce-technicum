@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Arimo:ital,wght@0,400..700;1,400..700&family=Kanit&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Riot&display=swap"
+      rel="stylesheet"
+    />
+    <title>KZGULP</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="left_item">
+          <h3>KZGULP</h3>
+        </div>
+        
+        <div class="mid_item">
+            <div class="search_item">
+                <input tabindex="1" type="text" placeholder="Поиск..." />
+              </div>
+        </div>
+
+        <div class="right_item">
+          <div class="heart_icon">
+            <p>Изрбранные</p>
+            <p class="count" id="heart_count">1</p>
+            <img width="30" src="assets/heart.png" alt="" />
+          </div>
+
+          <div class="basket_icon">
+            <p>Корзина</p>
+            <p class="count" id="basket_count">1</p>
+            <img width="30" src="assets/basket.png" alt="" />
+          </div>
+
+          <div class="user_id">
+            <p>Логин</p>
+            <img width="30" src="/assets/user.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="article">
+        
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <img src="assets/banner.webp" style="width:100%">
+            </div>
+          
+            <div class="mySlides fade">
+              <img src="assets/banner_redmi.webp" style="width:100%">
+            </div>
+          
+            <div class="mySlides fade">
+              <img src="assets/banner_oppo2.webp" style="width:100%">
+            </div>
+          
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+          
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+
+
+        <div class="search_selected">
+
+          
+        <div class="categories">
+          <div class="categories_product">
+            <select name="" id="">
+              <option value="">Все</option>
+              <option value="">Ноутбуки</option>
+              <option value="">Смартфоны</option>
+              <option value="">Телевизоры</option>
+            </select>
+          </div>
+
+          <div class="select_price_from">
+            <select name="" id="">
+              <option value="">Все</option>
+              <option value="">По возрастанию цены</option>
+              <option value="">По убыванию цены</option>
+            </select>
+          </div>
+        </div>
+    </div>
+        <div class="cards">
+
+        </div>
+
+      </div>
+
+      <div class="footer">
+        <div class="left_item_footer social_networks">
+            
+        </div>
+
+        <div class="mid_item_footer">
+
+        </div>
+        <div class="right_item_footer">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="modal_basket">
+        <span id="close_modal">&#10006;</span>
+        <div class="basket_item" id = "basket_item">
+            <div class="header_basket">
+                <p>#</p>
+                <p>Называние</p>
+                <p>Цена</p>
+
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+  </body>
+</html>
