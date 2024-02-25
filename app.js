@@ -250,7 +250,9 @@ const addBasketProduct = (product) => {
           <img src = "${product.img}"/>
 
           <p>${product.marks}</p>
-          <p>${product.price}</p>
+          <p>${product.price}тг</p>
+          <input type = "number">
+          <button>Удалить</button>
        </div>
     `;
 
@@ -278,6 +280,7 @@ addtoBasket()
 
 const addToItemBasket = () => {
     const btns = document.querySelectorAll('.basket_add button')
+    const basket_count = document.querySelector('#basket_count')
 
     for(let i = 0; i < btns.length; i++){
         const button = btns[i]
@@ -292,6 +295,8 @@ const addToItemBasket = () => {
             else{
               console.error("Ошибка")
             }
+            basket_count.style.display = "block"
+            console.log(basket_count.value)
         })
     }
 }

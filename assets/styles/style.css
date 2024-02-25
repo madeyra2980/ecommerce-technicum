@@ -293,11 +293,13 @@
 
 .modal_basket{
     display: none;
-    background-color: rgba(82, 82, 82, 0.8); /* Изменено на rgba для прозрачности */
     position: fixed;
-    top: 0px;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    background-color: rgba(82, 82, 82, 0.6); /* Прозрачный цвет фона */
+    z-index: 999; 
     
 }
 
@@ -319,13 +321,12 @@
 
 
 .basket_item{
-    width: 1000px;
-    height: 600px;
+    margin-top: 50px; 
+    padding: 20px;
     background-color: white;
-    opacity: 4;
-    margin: 50px auto;
-    position: relative;
-    overflow:scroll;
+    border-radius: 5px;
+    overflow: scroll;
+    height: 80%;
 }
 
 
@@ -348,22 +349,61 @@
     align-items: center;
 }
 
+.header_basket {
+        display: grid;
+        grid-template-columns: 5fr 15fr 7fr 8fr 1fr; 
+        font-weight: bold;
+        border-bottom: 1px solid #ddd;
+        font-family: sans-serif;
+}
 
-.header_basket{
-    width: 700px;
-    margin: 40px auto;
-    display: flex;
-    justify-content: space-between;
+.header_basket p {
+    padding: 10px 0;
 }
 
 .table_product{
-    width: 690px;
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
+    margin: 40px auto;
+    align-items: center;
+    padding:0  100px;
+    font-family: sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 4fr 2fr 1fr 1fr; 
 }
+.basket_row {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr 1fr; /* Распределение колонок */
+    border-bottom: 1px solid #ddd; /* Линия между строками */
+}
+.delete_button {
+    color: red;
+    cursor: pointer;
+}
+
+/* Стили для выделения товара */
+.selected {
+    background-color: #f2f2f2; /* Цвет выделения */
+}
+
 
 .table_product img{
     max-width: 100px;
     width: 100%;
+}
+
+
+.table_product button{
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    background-color: #4c4343;
+    border-radius: 10px;
+    color: white;
+}
+
+.table_product input{
+    width: 40px;
+    text-align: center;
 }
